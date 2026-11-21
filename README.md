@@ -1,4 +1,4 @@
-# ReadSpace (ЛР №11)
+# ReadSpace (ЛР №12)
 
 Адаптивний лендинг читацького клубу ReadSpace з інтегрованими динамічними медіакомпонентами на чистому JavaScript (Vanilla JS) через CDN.
 
@@ -21,6 +21,12 @@
 - `assets/js/widget.js` — планувальник читання (ЛР №11);
 - `assets/js/validation.js` — клієнтська валідація форми зворотного зв’язку;
 - `assets/images/` — графічні активи ReadSpace (обкладинки, аватари, логотип).
+
+## Аудит та CI/CD (ЛР №12)
+
+- Аудит Google Lighthouse (Mobile) і оптимізація: AVIF для hero, неблокуючі CDN-стилі, явні розміри зображень, семантичні кнопки слайдера, сенсорні цілі 48×48, canonical, Open Graph, `robots.txt`, `sitemap.xml`, кешування у `vercel.json`.
+- CI/CD: `.github/workflows/deploy.yml` — після `push` у `main` виконується перевірка (test) і деплой на Vercel (deploy). Секрети: `VERCEL_TOKEN`, `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID`.
+- Сайт: https://readspace-lr12.vercel.app/
 
 ## Автор
 
