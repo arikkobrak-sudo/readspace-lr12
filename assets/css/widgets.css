@@ -60,12 +60,17 @@
   width: auto;
   display: flex;
   align-items: center;
-  gap: 0.35rem;
+  gap: 0.25rem;
 }
 
 .reviews-swiper .swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
+  /* Зона дотику 24×24 (WCAG 2.5.8), видима крапка — 10 px */
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  margin: 0 !important;
+  border: 7px solid transparent;
+  background-clip: content-box;
   transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
