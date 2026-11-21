@@ -28,6 +28,12 @@
       return { error: "Введи число цифрами." };
     const raw = input.value.trim();
     if (raw === "") return { error: labels.empty };
+    // Лише цифри: відсікає експоненту (1e3), знаки та пробіли
+    if (/^-/.test(raw)) {
+      return { error: `Допустимо від ${rule.min} до ${rule.max}.` };
+    }
+    if (/^\d+[.,]\d+$/.test(raw)) return { error: labels.integer };
+    if (!/^\d+$/.test(raw)) return { error: "Введи число цифрами." };
     const value = Number(raw);
     if (!Number.isFinite(value))
       return { error: "Введи число цифрами." };
