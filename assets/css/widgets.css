@@ -196,3 +196,20 @@
     aspect-ratio: 16 / 9;
   }
 }
+
+/* Typed.js: фраза в Hero друкується в окремому рядку з мінімальною висотою, щоб заголовок не «стрибав» */
+.hero-typed-line {
+  display: block;
+  min-height: 1.25em;
+  color: #e8a33d;
+}
+
+.hero-typed-line .typed-cursor {
+  font-weight: 400;
+}
+
+@media (max-width: 399px) {
+  .hero-typed-line {
+    min-height: 2.5em;
+  }
+}

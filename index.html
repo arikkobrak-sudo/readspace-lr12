@@ -189,7 +189,10 @@
               id="hero-title"
               class="text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl"
             >
-              Читай у власному ритмі
+              <span class="sr-only">Читай у власному ритмі</span>
+              <span aria-hidden="true">Читай
+                <span class="hero-typed-line"><span id="hero-typed">у власному ритмі</span></span>
+              </span>
             </h1>
             <p
               class="mt-5 max-w-2xl text-lg leading-relaxed text-white/90 sm:text-xl"
@@ -1342,6 +1345,7 @@
     <!-- JS-бібліотеки через CDN (перед закриттям </body>) + ініціалізація -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@3.0.0/dist/typed.umd.js" defer></script>
     <script src="assets/js/widgets.js" defer></script>
     <script src="assets/js/validation.js" defer></script>
     <script src="assets/js/widget.js" defer></script>

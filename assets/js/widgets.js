@@ -60,4 +60,19 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     });
   }
+
+  // 3. Ефект друку тексту в Hero-блоці (Typed.js v3)
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (typeof Typed !== "undefined" && document.querySelector("#hero-typed") && !prefersReducedMotion) {
+    new Typed("#hero-typed", {
+      strings: ["за настроєм", "у вільну хвилину", "українською"],
+      typeSpeed: 60,
+      backSpeed: 35,
+      startDelay: 1200,
+      backDelay: 2000,
+      loop: true,
+      smartBackspace: true,
+      cursorChar: "|",
+    });
+  }
 });
